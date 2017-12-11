@@ -1,6 +1,12 @@
-var appModelName1 =angular.module("appModelName",[]);
-appModelName1.controller('appController',['$scope',  function($scope){
-	$scope.firstname = "sekar";
-	$scope.lastName = "raj";
+var appModelName =angular.module("appModelName",[]);
+appModelName.controller('appController',['$scope',  function($scope){
+			$scope.reset =function(){
+				$scope.firstName = "sekar";
+				$scope.lastName = "raj";
+				$scope.email = "sekarraj@gmail.com";
+			}
+
+			
+
 
 }]);
