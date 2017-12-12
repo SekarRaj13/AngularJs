@@ -5,9 +5,8 @@
 </head>
 <body ng-controller="appController">
 
-<form ng-controller="appController">
+<form>
 	<input name = "firstname" type = "text" ng-model = "firstName" required>
-	{{firstName}}
 <input name = "lastname" type = "text" ng-model = "lastName" required>
 <input name = "email" type = "email" ng-model = "email" required>
 <button ng-click = "reset()">Reset</button>
