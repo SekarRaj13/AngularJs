@@ -1,5 +1,5 @@
 var appModelName =angular.module("appModelName",[]);
-appModelName.controller('appController1',['$scope',  function($scope){
+appModelName.controller('appController1',['$scope','$http',  function($scope,$http){
 
 	// controllers data
 
@@ -18,7 +18,7 @@ appModelName.controller('appController1',['$scope',  function($scope){
 
      //  filters data start
 
-            
+      
 
      $scope.student = {
                firstName: "Mahesh",
@@ -28,7 +28,7 @@ appModelName.controller('appController1',['$scope',  function($scope){
                subjects:[
                   {name:'Physics',marks:70},
                   {name:'Chemistry',marks:80},
-                  {name:'Math',marks:65}
+                  {name:'Math',marks:88}
                ],
                
                fullName: function() {
@@ -39,4 +39,13 @@ appModelName.controller('appController1',['$scope',  function($scope){
             };
 
 
+   // http ajax call
+
+      var url = "data.txt";
+
+      $http.get(url).then( function(response) {
+               $scope.students = response.data;
+            });
+
+   // complete http ajax call
 }]);
